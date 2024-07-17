@@ -419,7 +419,7 @@ icon = ExtResource( 1 )
 flat = true
 icon_align = 1
 
-[node name="Button" type="Button" parent="Control5"]
+[node name="gbtn" type="Button" parent="Control5"]
 margin_left = -568.0
 margin_top = 239.0
 margin_right = -488.0
@@ -427,7 +427,7 @@ margin_bottom = 263.0
 rect_pivot_offset = Vector2( 72, 16 )
 text = "Google"
 
-[node name="Button2" type="Button" parent="Control5"]
+[node name="fbtn" type="Button" parent="Control5"]
 margin_left = -456.0
 margin_top = 239.0
 margin_right = -376.0
@@ -435,7 +435,7 @@ margin_bottom = 263.0
 rect_pivot_offset = Vector2( 72, 16 )
 text = "Facebook"
 
-[node name="Button3" type="Button" parent="Control5"]
+[node name="sbtn" type="Button" parent="Control5"]
 margin_left = -128.0
 margin_top = 239.0
 margin_right = -48.0
@@ -443,7 +443,7 @@ margin_bottom = 263.0
 rect_pivot_offset = Vector2( 72, 16 )
 text = "Tiktok"
 
-[node name="Button4" type="Button" parent="Control5"]
+[node name="ibtn" type="Button" parent="Control5"]
 margin_left = -232.0
 margin_top = 239.0
 margin_right = -155.0
@@ -451,7 +451,7 @@ margin_bottom = 263.0
 rect_pivot_offset = Vector2( 72, 16 )
 text = "Snapchat"
 
-[node name="Button5" type="Button" parent="Control5"]
+[node name="tbtn" type="Button" parent="Control5"]
 margin_left = -344.0
 margin_top = 239.0
 margin_right = -260.0
