@@ -1,25 +1,24 @@
 extends Node2D
 
-func _on_continue_1_pressed():
-	get_node("Control1").visible = false
-	get_node("Control2").visible = true
+func _on_Continue_1_pressed():
+	$Control1.visible = false
+	$Control2.visible = true
 
 func _on_continue_2_pressed():
-	get_node("Control2").visible = false
-	get_node("Control3").visible = true
+	$Control2.visible = false
+	$Control3.visible = true
 
 func _on_continue_3_pressed():
-	get_node("Control3").visible = false
-	get_node("Control4").visible = true
+	$Control3.visible = false
+	$Control4.visible = true
 
 func _on_continue_4_pressed():
-	get_node("Control4").visible = false
-	get_node("Control5").visible = true
-	
+	$Control4.visible = false
+	$Control5.visible = true
 
 func _on_continue_5_pressed():
-	get_node("Control5").visible = false
-	get_node("Control6").visible = true
+	$Control5.visible = false
+	$Control6.visible = true
 
 ##Function to toggle the visibility of the map lines
 var texture_gline
@@ -61,24 +60,24 @@ func _on_tbtn_pressed():
 	
 	
 func _on_back_2_pressed():
-	get_node("Control1").visible = true
-	get_node("Control2").visible = false
+	$Control1.visible = true
+	$Control2.visible = false
 	
 	
 func _on_back_3_pressed():
-	get_node("Control2").visible = true
-	get_node("Control3").visible = false
+	$Control2.visible = true
+	$Control3.visible = false
 
 
 func _on_back_4_pressed():
-	get_node("Control3").visible = true
-	get_node("Control4").visible = false
+	$Control3.visible = true
+	$Control4.visible = false
 
 
 func _on_back_5_pressed():
-	get_node("Control4").visible = true
-	get_node("Control5").visible = false
+	$Control4.visible = true
+	$Control5.visible = false
 
 func _on_back_6_pressed():
-	get_node("Control5").visible = true
-	get_node("Control6").visible = false
+	$Control5.visible = true
+	$Control6.visible = false

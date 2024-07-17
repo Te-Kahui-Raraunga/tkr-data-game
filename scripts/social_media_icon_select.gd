@@ -8,7 +8,7 @@ func _ready():
 	set_process_input(true) # Enable input processing
 #this is to fire an event when icon is left clicked
 func _gui_input(event):
-	if event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
+	if event.is_pressed() and event.button_index == BUTTON_LEFT:
 		toggle_selected()
 #When taonga is selected, give a visual confirmation and add to taonga array
 func toggle_selected():
