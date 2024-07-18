@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://resources/Images/Graphics/IdleBtn_sml_light.png" type="Texture" id=1]
 [ext_resource path="res://resources/Background/bg_pattern.png" type="Texture" id=2]
@@ -25,9 +25,12 @@
 [ext_resource path="res://resources/Images/Graphics/945ce830-b4bf-4835-94cc-dcb48d92ff55.jpeg" type="Texture" id=23]
 [ext_resource path="res://resources/Fonts/Montserrat/static/Montserrat-Regular.ttf" type="DynamicFontData" id=24]
 [ext_resource path="res://scripts/main.gd" type="Script" id=25]
+[ext_resource path="res://scripts/toanga_icon_select.gd" type="Script" id=26]
+[ext_resource path="res://scripts/social_media_icon_select.gd" type="Script" id=27]
+[ext_resource path="res://scripts/control_4.gd" type="Script" id=28]
 
 [sub_resource type="DynamicFont" id=1]
-size = 34
+size = 36
 outline_color = Color( 1, 1, 1, 0.411765 )
 font_data = ExtResource( 18 )
 
@@ -47,7 +50,7 @@ size = 15
 font_data = ExtResource( 24 )
 
 [node name="Main" type="Node2D"]
-position = Vector2( 528, 289 )
+position = Vector2( 981, 540 )
 script = ExtResource( 25 )
 
 [node name="Color_BG" type="ColorRect" parent="."]
@@ -72,10 +75,10 @@ margin_top = -342.0
 margin_right = 584.0
 margin_bottom = 330.0
 rect_scale = Vector2( 0.984915, 1.01456 )
-color = Color( 0.611765, 0.415686, 0.211765, 1 )
+color = Color( 0.611765, 0.415686, 0.211765, 0.0941176 )
 
 [node name="Trans_FG" type="TextureRect" parent="."]
-modulate = Color( 1, 1, 1, 0.658824 )
+modulate = Color( 1, 1, 1, 0.466667 )
 margin_left = -644.0
 margin_top = -352.0
 margin_right = 3324.0
@@ -100,10 +103,11 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Control1"]
-margin_left = -328.0
-margin_top = -137.0
-margin_right = 320.0
-margin_bottom = -80.0
+modulate = Color( 1, 1, 1, 0.647059 )
+margin_left = -246.0
+margin_top = -161.0
+margin_right = 266.0
+margin_bottom = -104.0
 rect_pivot_offset = Vector2( 568, 40 )
 custom_fonts/normal_font = SubResource( 1 )
 text = "Nuture Data as a Taonga"
@@ -111,10 +115,10 @@ fit_content_height = true
 scroll_active = false
 
 [node name="Continue1" type="Button" parent="Control1"]
-margin_left = -104.0
-margin_top = 55.0
-margin_right = 98.0
-margin_bottom = 122.0
+margin_left = -105.0
+margin_top = 28.0
+margin_right = 97.0
+margin_bottom = 95.0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -126,10 +130,10 @@ icon_align = 1
 [node name="RichTextLabel" type="RichTextLabel" parent="Control1"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -392.0
-margin_top = -41.0
-margin_right = 315.0
-margin_bottom = 7.0
+margin_left = -385.0
+margin_top = -73.0
+margin_right = 322.0
+margin_bottom = -25.0
 rect_pivot_offset = Vector2( 568, 40 )
 custom_fonts/normal_font = SubResource( 2 )
 text = "Ko te moemoea a Maui kia haere ngatahi ai ratou ko ona tuakana ki te hii ika. I te hokinga mai o ona tuakana ki tatahi, ka kii atu a Maui, “ka taea e au te haramai i to koutou na taha ki te hii ika?” "
@@ -142,6 +146,7 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Control2"]
+visible = false
 modulate = Color( 1, 1, 1, 0.764706 )
 margin_left = -592.0
 margin_top = -305.0
@@ -153,7 +158,7 @@ text = "Select what you consider is Taonga from the following"
 fit_content_height = true
 scroll_active = false
 
-[node name="continue2" type="Button" parent="Control2"]
+[node name="Continue2" type="Button" parent="Control2"]
 margin_left = 360.0
 margin_top = 271.0
 margin_right = 562.0
@@ -169,10 +174,10 @@ icon_align = 1
 [node name="RichTextLabel" type="RichTextLabel" parent="Control2"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -624.0
-margin_top = -201.0
-margin_right = 83.0
-margin_bottom = -153.0
+margin_left = -614.0
+margin_top = -232.0
+margin_right = 93.0
+margin_bottom = -184.0
 rect_pivot_offset = Vector2( 568, 40 )
 custom_fonts/normal_font = SubResource( 2 )
 text = "Ko te moemoea a Maui kia haere ngatahi ai ratou ko ona tuakana ki te hii ika. I te hokinga mai o ona tuakana ki tatahi, ka kii atu a Maui, “ka taea e au te haramai i to koutou na taha ki te hii ika?” "
@@ -180,11 +185,17 @@ fit_content_height = true
 scroll_active = false
 
 [node name="TextureRect" type="TextureRect" parent="Control2"]
-margin_left = -320.0
-margin_top = -81.0
-margin_right = -120.0
-margin_bottom = 57.0
+anchor_left = 0.029
+anchor_top = 0.221
+anchor_right = 0.578
+anchor_bottom = 0.247
+margin_left = -333.0
+margin_top = -76.0
+margin_right = -98.0
+margin_bottom = 62.0
+rect_scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 8 )
+script = ExtResource( 26 )
 
 [node name="TextureRect2" type="TextureRect" parent="Control2"]
 margin_left = 48.0
@@ -192,6 +203,7 @@ margin_top = -81.0
 margin_right = 248.0
 margin_bottom = 57.0
 texture = ExtResource( 9 )
+script = ExtResource( 26 )
 
 [node name="TextureRect3" type="TextureRect" parent="Control2"]
 margin_left = 48.0
@@ -199,6 +211,7 @@ margin_top = 151.0
 margin_right = 248.0
 margin_bottom = 289.0
 texture = ExtResource( 7 )
+script = ExtResource( 26 )
 
 [node name="TextureRect4" type="TextureRect" parent="Control2"]
 margin_left = -328.0
@@ -206,9 +219,30 @@ margin_top = 151.0
 margin_right = -128.0
 margin_bottom = 289.0
 texture = ExtResource( 10 )
+script = ExtResource( 26 )
+
+[node name="Back2" type="Button" parent="Control2"]
+margin_left = -640.0
+margin_top = -329.0
+margin_right = -592.0
+margin_bottom = -289.0
+icon = ExtResource( 21 )
+flat = true
+expand_icon = true
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Control2"]
+modulate = Color( 1, 1, 1, 0.827451 )
+margin_left = -578.0
+margin_top = -326.0
+margin_right = -66.0
+margin_bottom = -250.0
+rect_pivot_offset = Vector2( 568, 40 )
+custom_fonts/normal_font = SubResource( 1 )
+text = "Select what you consider is Taonga from the following"
+fit_content_height = true
+scroll_active = false
 
 [node name="Control3" type="Control" parent="."]
-visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 152, -49 )
@@ -225,7 +259,7 @@ text = "Select what you consider is Taonga from the following"
 fit_content_height = true
 scroll_active = false
 
-[node name="Continue1" type="Button" parent="Control3"]
+[node name="Continue3" type="Button" parent="Control3"]
 margin_left = 360.0
 margin_top = 271.0
 margin_right = 562.0
@@ -233,6 +267,7 @@ margin_bottom = 338.0
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+disabled = true
 text = "Continue"
 icon = ExtResource( 1 )
 flat = true
@@ -257,6 +292,7 @@ margin_top = -105.0
 margin_right = -384.0
 margin_bottom = 145.0
 texture = ExtResource( 12 )
+script = ExtResource( 27 )
 
 [node name="TextureRect2" type="TextureRect" parent="Control3"]
 margin_left = 160.0
@@ -264,6 +300,7 @@ margin_top = -105.0
 margin_right = 360.0
 margin_bottom = 145.0
 texture = ExtResource( 20 )
+script = ExtResource( 27 )
 
 [node name="TextureRect3" type="TextureRect" parent="Control3"]
 margin_left = 392.0
@@ -271,6 +308,7 @@ margin_top = -105.0
 margin_right = 592.0
 margin_bottom = 145.0
 texture = ExtResource( 11 )
+script = ExtResource( 27 )
 
 [node name="TextureRect4" type="TextureRect" parent="Control3"]
 margin_left = -336.0
@@ -278,33 +316,46 @@ margin_top = -105.0
 margin_right = -136.0
 margin_bottom = 145.0
 texture = ExtResource( 13 )
+script = ExtResource( 27 )
 
 [node name="TextureRect5" type="TextureRect" parent="Control3"]
 margin_left = -88.0
 margin_top = -105.0
-margin_right = 112.0
+margin_right = 91.0
 margin_bottom = 145.0
 texture = ExtResource( 15 )
+stretch_mode = 1
+script = ExtResource( 27 )
+
+[node name="Back3" type="Button" parent="Control3"]
+margin_left = -640.0
+margin_top = -329.0
+margin_right = -592.0
+margin_bottom = -289.0
+icon = ExtResource( 21 )
+flat = true
+expand_icon = true
 
 [node name="Control4" type="Control" parent="."]
 visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 152, -49 )
+script = ExtResource( 28 )
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Control4"]
 modulate = Color( 1, 1, 1, 0.764706 )
-margin_left = -392.0
-margin_top = -337.0
-margin_right = 368.0
-margin_bottom = -281.0
+margin_left = -416.0
+margin_top = -335.0
+margin_right = 445.0
+margin_bottom = -279.0
 rect_pivot_offset = Vector2( 568, 40 )
 custom_fonts/normal_font = SubResource( 1 )
 text = "Drag and drop the toanga to each platform you use"
 fit_content_height = true
 scroll_active = false
 
-[node name="Continue1" type="Button" parent="Control4"]
+[node name="Continue4" type="Button" parent="Control4"]
 margin_left = 360.0
 margin_top = 271.0
 margin_right = 562.0
@@ -371,6 +422,31 @@ rect_pivot_offset = Vector2( 312, 42 )
 texture = ExtResource( 14 )
 expand = true
 
+[node name="Back4" type="Button" parent="Control4"]
+margin_left = -640.0
+margin_top = -329.0
+margin_right = -592.0
+margin_bottom = -289.0
+icon = ExtResource( 21 )
+flat = true
+expand_icon = true
+
+[node name="SocialMediaHbox" type="HBoxContainer" parent="Control4"]
+margin_left = -501.0
+margin_top = -196.0
+margin_right = 499.0
+margin_bottom = -124.0
+custom_constants/separation = 6
+alignment = 1
+
+[node name="ToangaHbox2" type="HBoxContainer" parent="Control4"]
+margin_left = -485.0
+margin_top = -292.0
+margin_right = 515.0
+margin_bottom = -164.0
+custom_constants/separation = 6
+alignment = 1
+
 [node name="Control5" type="Control" parent="."]
 visible = false
 margin_right = 40.0
@@ -395,18 +471,18 @@ margin_right = 464.0
 margin_bottom = 191.0
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Control5"]
-modulate = Color( 1, 1, 1, 0.764706 )
-margin_left = -392.0
-margin_top = -337.0
-margin_right = 368.0
-margin_bottom = -281.0
+modulate = Color( 1, 1, 1, 0.690196 )
+margin_left = -561.0
+margin_top = -336.0
+margin_right = 416.0
+margin_bottom = -280.0
 rect_pivot_offset = Vector2( 136, 128 )
 custom_fonts/normal_font = SubResource( 1 )
-text = "Drag and drop the toanga to each platform you use"
+text = "Where are my taonga stored?"
 fit_content_height = true
 scroll_active = false
 
-[node name="Continue1" type="Button" parent="Control5"]
+[node name="Continue5" type="Button" parent="Control5"]
 margin_left = 360.0
 margin_top = 271.0
 margin_right = 562.0
@@ -475,7 +551,21 @@ margin_bottom = 222.0
 custom_fonts/font = SubResource( 3 )
 text = "Toggle map lines"
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Control5"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -599.0
+margin_top = -289.0
+margin_right = 108.0
+margin_bottom = -241.0
+rect_pivot_offset = Vector2( 568, 40 )
+custom_fonts/normal_font = SubResource( 2 )
+text = "Ko te moemoea a Maui kia haere ngatahi ai ratou ko ona tuakana ki te hii ika. I te hokinga mai o ona tuakana ki tatahi, ka kii atu a Maui, “ka taea e au te haramai i to koutou na taha ki te hii ika?” "
+fit_content_height = true
+scroll_active = false
+
 [node name="Control6" type="Control" parent="."]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 152, -49 )
@@ -597,7 +687,7 @@ align = 1
 valign = 1
 autowrap = true
 
-[node name="Button" type="Button" parent="Control6"]
+[node name="Back6" type="Button" parent="Control6"]
 margin_left = -640.0
 margin_top = -329.0
 margin_right = -592.0
@@ -607,4 +697,17 @@ flat = true
 expand_icon = true
 
 [connection signal="pressed" from="Control1/Continue1" to="." method="_on_Continue1_pressed"]
-[connection signal="pressed" from="Control2/continue2" to="." method="_on_continue2_pressed"]
+[connection signal="pressed" from="Control2/Continue2" to="." method="_on_Continue2_pressed"]
+[connection signal="pressed" from="Control2/Back2" to="." method="_on_Back2_pressed"]
+[connection signal="pressed" from="Control3/Continue3" to="." method="_on_Continue3_pressed"]
+[connection signal="pressed" from="Control3/Back3" to="." method="_on_Back3_pressed"]
+[connection signal="visibility_changed" from="Control4" to="Control4" method="_on_Control4_visibility_changed"]
+[connection signal="pressed" from="Control4/Continue4" to="." method="_on_Continue4_pressed"]
+[connection signal="pressed" from="Control4/Back4" to="." method="_on_Back4_pressed"]
+[connection signal="pressed" from="Control5/Continue5" to="." method="_on_Continue5_pressed"]
+[connection signal="pressed" from="Control5/gbtn" to="." method="_on_gbtn_pressed"]
+[connection signal="pressed" from="Control5/fbtn" to="." method="_on_fbtn_pressed"]
+[connection signal="pressed" from="Control5/sbtn" to="." method="_on_sbtn_pressed"]
+[connection signal="pressed" from="Control5/ibtn" to="." method="_on_ibtn_pressed"]
+[connection signal="pressed" from="Control5/tbtn" to="." method="_on_tbtn_pressed"]
+[connection signal="pressed" from="Control6/Back6" to="." method="_on_Back6_pressed"]

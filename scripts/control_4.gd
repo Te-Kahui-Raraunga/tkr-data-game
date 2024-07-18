@@ -1,6 +1,6 @@
 extends Control
 
-func _on_visibility_changed():
+func _on_Control4_visibility_changed():
 
 	# Get the TextureArray from the global script
 	var social_media_hbox = $SocialMediaHbox
@@ -14,12 +14,12 @@ func _on_visibility_changed():
 	for texture in SocialMediaVars.taonga_array:
 		var textureRect = TextureRect.new()
 		textureRect.texture = texture.texture
-		textureRect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		textureRect.stretch_mode = TextureRect.STRETCH_SCALE
+		textureRect.expand_mode = true
+		textureRect.stretch_mode = TextureRect.STRETCH_SCALE_ON_EXPAND
 		
 		textureRect.custom_minimum_size = Vector2(30,18)
 		
-		var taonga_hbox = $ToangaHbox3
+		var taonga_hbox = $ToangaHbox2
 		taonga_hbox.add_child(textureRect)
 		
 	#Add social media to top hbox and create a vbox for each one
@@ -28,19 +28,24 @@ func _on_visibility_changed():
 		# Create a VBoxContainer to hold the icons
 		var vbox_container = VBoxContainer.new()
 		var textureRect = TextureRect.new()
+		
 		textureRect.texture = texture.texture
-		textureRect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		textureRect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-		textureRect.custom_minimum_size = Vector2(30,30)
+		textureRect.expand = true
+		textureRect.rect_min_size = Vector2(200,200)
 		
 		# Add the TextureRect to thSocialMediaVboxe VBoxContainer
 		vbox_container.add_child(textureRect)
-		vbox_container.add_theme_constant_override("separation", 1)
+		vbox_container.add_constant_override("separation", 15)
 		
 		#Loop through taonga array and add "droppable" area textureRects
 		for n in 6:
-			var instance = dropArea.instantiate()
+			var instance = dropArea.instance()
+			instance.expand = true
+			textureRect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+			instance.margin_left = 50
 			vbox_container.add_child(instance)
 		
 		# Add each vbox to the main social media hbox 
 		social_media_hbox.add_child(vbox_container)
+

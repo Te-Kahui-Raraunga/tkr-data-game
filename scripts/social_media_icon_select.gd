@@ -14,13 +14,13 @@ func _gui_input(event):
 func toggle_selected():
 	is_selected = not is_selected
 	if is_selected:
-		self.scale = Vector2(1.05, 1.05) # Increase size when selected 
+		self.rect_scale = Vector2(1.05, 1.05) # Increase size when selected 
 		SocialMediaVars.social_array.append(self)
 		print("Logo added")
 		#continue button is enabled only when a social media is selected
 		$"../Continue3".disabled = false
 	else:
 		var index = SocialMediaVars.social_array.find(self)
-		SocialMediaVars.social_array.remove_at(index)
+		SocialMediaVars.social_array.erase(index)
 		print("Logo removed")
-		self.scale = Vector2(1, 1) # Reset to normal size when unselected
+		self.rect_scale = Vector2(1, 1) # Reset to normal size when unselected
