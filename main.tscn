@@ -1,11 +1,11 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://resources/Images/Graphics/IdleBtn_sml_light.png" type="Texture" id=1]
-[ext_resource path="res://resources/Background/bg_pattern.png" type="Texture" id=2]
-[ext_resource path="res://resources/Fonts/bg_trans.png" type="Texture" id=3]
+[ext_resource path="res://resources/Images/logos/bg_pattern.png" type="Texture" id=2]
+[ext_resource path="res://resources/Background/bg_trans.png" type="Texture" id=3]
 [ext_resource path="res://resources/Background/TKR_Image Library-66(1).jpg" type="Texture" id=4]
 [ext_resource path="res://resources/Images/Graphics/d4470bff-1a09-488c-b6f9-ad291fabe280.jpeg" type="Texture" id=5]
-[ext_resource path="res://resources/Fonts/Oxanium/static/Oxanium-Light.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://resources/Fonts/Oxanium/Oxanium-VariableFont_wght.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://resources/Images/Graphics/sc2 4.png" type="Texture" id=7]
 [ext_resource path="res://resources/Images/Graphics/sc2 1.png" type="Texture" id=8]
 [ext_resource path="res://resources/Images/Graphics/sc2 2.png" type="Texture" id=9]
@@ -17,13 +17,11 @@
 [ext_resource path="res://resources/Images/logos/G_card.png" type="Texture" id=15]
 [ext_resource path="res://resources/Fonts/Oxanium/static/Oxanium-Regular.ttf" type="DynamicFontData" id=16]
 [ext_resource path="res://resources/Background/20240411_102651550_iOS.png" type="Texture" id=17]
-[ext_resource path="res://resources/Fonts/Oxanium/static/Oxanium-Medium.ttf" type="DynamicFontData" id=18]
 [ext_resource path="res://resources/Images/Graphics/pixlr-image-generator-200f5a9b-d956-4c89-a659-40093462b8c1.png" type="Texture" id=19]
 [ext_resource path="res://resources/Images/logos/SC_card.png" type="Texture" id=20]
 [ext_resource path="res://resources/Images/Graphics/white_back_arrow.png" type="Texture" id=21]
 [ext_resource path="res://resources/Background/TKR_Image Library-10-min.jpg" type="Texture" id=22]
 [ext_resource path="res://resources/Images/Graphics/945ce830-b4bf-4835-94cc-dcb48d92ff55.jpeg" type="Texture" id=23]
-[ext_resource path="res://resources/Fonts/Montserrat/static/Montserrat-Regular.ttf" type="DynamicFontData" id=24]
 [ext_resource path="res://scripts/main.gd" type="Script" id=25]
 [ext_resource path="res://scripts/toanga_icon_select.gd" type="Script" id=26]
 [ext_resource path="res://scripts/social_media_icon_select.gd" type="Script" id=27]
@@ -39,16 +37,22 @@
 [ext_resource path="res://resources/Images/GoogleLine.png" type="Texture" id=37]
 [ext_resource path="res://resources/Images/InstagramLine.png" type="Texture" id=38]
 [ext_resource path="res://resources/Images/SnapchatLine.png" type="Texture" id=39]
-[ext_resource path="res://resources/Fonts/Oxanium/Oxanium-VariableFont_wght.ttf" type="DynamicFontData" id=40]
 [ext_resource path="res://scripts/control_6.gd" type="Script" id=41]
+
+[sub_resource type="DynamicFont" id=8]
+size = 45
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=9]
+font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 16 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 36
 outline_color = Color( 1, 1, 1, 0.411765 )
-font_data = ExtResource( 18 )
-
-[sub_resource type="DynamicFont" id=2]
-font_data = ExtResource( 6 )
+font_data = ExtResource( 16 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 14
@@ -56,16 +60,11 @@ font_data = ExtResource( 16 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 24
-font_data = ExtResource( 18 )
+font_data = ExtResource( 16 )
 
 [sub_resource type="DynamicFont" id=5]
-size = 15
-font_data = ExtResource( 24 )
-
-[sub_resource type="DynamicFont" id=6]
-size = 15
-outline_color = Color( 0.956863, 0.933333, 0.933333, 1 )
-font_data = ExtResource( 40 )
+size = 17
+font_data = ExtResource( 16 )
 
 [node name="Main" type="Node2D"]
 position = Vector2( 981, 540 )
@@ -79,54 +78,56 @@ margin_bottom = 769.0
 color = Color( 0.0431373, 0.0431373, 0.0431373, 1 )
 
 [node name="Trans_BG" type="TextureRect" parent="."]
-margin_left = -1189.0
-margin_top = -724.0
-margin_right = 1111.0
-margin_bottom = 740.0
+margin_left = -1117.0
+margin_top = -700.0
+margin_right = 1183.0
+margin_bottom = 764.0
 texture = ExtResource( 2 )
 stretch_mode = 1
 
 [node name="Color_FG" type="ColorRect" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = -594.0
-margin_top = -342.0
-margin_right = 584.0
-margin_bottom = 330.0
+margin_left = -587.0
+margin_top = -410.0
+margin_right = 591.0
+margin_bottom = 262.0
 rect_scale = Vector2( 0.984915, 1.01456 )
 color = Color( 0.611765, 0.415686, 0.211765, 0.0941176 )
 
 [node name="Trans_FG" type="TextureRect" parent="."]
 modulate = Color( 1, 1, 1, 0.466667 )
-margin_left = -644.0
-margin_top = -352.0
-margin_right = 3324.0
-margin_bottom = 2293.0
+margin_left = -637.0
+margin_top = -420.0
+margin_right = 3331.0
+margin_bottom = 2225.0
 rect_scale = Vector2( 0.313312, 0.270305 )
 texture = ExtResource( 4 )
 stretch_mode = 1
 
 [node name="TKR_icon" type="TextureRect" parent="."]
 modulate = Color( 1, 1, 1, 0.2 )
-margin_left = -590.0
-margin_top = -258.0
-margin_right = 710.0
-margin_bottom = 345.0
+margin_left = -622.0
+margin_top = -336.0
+margin_right = 678.0
+margin_bottom = 267.0
 rect_scale = Vector2( 0.90472, 0.880195 )
 texture = ExtResource( 3 )
 stretch_mode = 2
 
 [node name="Control1" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 7.0
+margin_top = -68.0
+margin_right = 47.0
+margin_bottom = -28.0
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Control1"]
 modulate = Color( 1, 1, 1, 0.647059 )
-margin_left = -246.0
-margin_top = -161.0
-margin_right = 266.0
-margin_bottom = -104.0
+margin_left = -269.0
+margin_top = -196.0
+margin_right = 243.0
+margin_bottom = -139.0
 rect_pivot_offset = Vector2( 568, 40 )
-custom_fonts/normal_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 8 )
 text = "Nuture Data as a Taonga"
 fit_content_height = true
 scroll_active = false
@@ -152,28 +153,17 @@ margin_top = -73.0
 margin_right = 322.0
 margin_bottom = -25.0
 rect_pivot_offset = Vector2( 568, 40 )
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 9 )
 text = "Ko te moemoea a Maui kia haere ngatahi ai ratou ko ona tuakana ki te hii ika. I te hokinga mai o ona tuakana ki tatahi, ka kii atu a Maui, “ka taea e au te haramai i to koutou na taha ki te hii ika?” "
 fit_content_height = true
 scroll_active = false
 
 [node name="Control2" type="Control" parent="."]
 visible = false
-margin_right = 40.0
-margin_bottom = 40.0
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Control2"]
-visible = false
-modulate = Color( 1, 1, 1, 0.764706 )
-margin_left = -592.0
-margin_top = -305.0
-margin_right = -64.0
-margin_bottom = -191.0
-rect_pivot_offset = Vector2( 568, 40 )
-custom_fonts/normal_font = SubResource( 1 )
-text = "Select what you consider is Taonga from the following"
-fit_content_height = true
-scroll_active = false
+margin_left = 7.0
+margin_top = -68.0
+margin_right = 47.0
+margin_bottom = -28.0
 
 [node name="Continue2" type="Button" parent="Control2"]
 margin_left = 360.0
@@ -260,8 +250,10 @@ scroll_active = false
 
 [node name="Control3" type="Control" parent="."]
 visible = false
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 7.0
+margin_top = -68.0
+margin_right = 47.0
+margin_bottom = -28.0
 rect_pivot_offset = Vector2( 152, -49 )
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Control3"]
@@ -355,8 +347,10 @@ expand_icon = true
 
 [node name="Control4" type="Control" parent="."]
 visible = false
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 7.0
+margin_top = -68.0
+margin_right = 47.0
+margin_bottom = -28.0
 rect_pivot_offset = Vector2( 152, -49 )
 script = ExtResource( 28 )
 
@@ -479,8 +473,10 @@ alignment = 1
 
 [node name="Control5" type="Control" parent="."]
 visible = false
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 7.0
+margin_top = -68.0
+margin_right = 47.0
+margin_bottom = -28.0
 rect_pivot_offset = Vector2( 152, -49 )
 
 [node name="Trans_FG" type="TextureRect" parent="Control5"]
@@ -636,8 +632,10 @@ expand = true
 
 [node name="Control6" type="Control" parent="."]
 visible = false
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 7.0
+margin_top = -68.0
+margin_right = 47.0
+margin_bottom = -28.0
 rect_pivot_offset = Vector2( 152, -49 )
 script = ExtResource( 41 )
 
@@ -759,7 +757,6 @@ margin_left = 315.0
 margin_top = 236.0
 margin_right = 491.0
 margin_bottom = 300.0
-custom_fonts/font = SubResource( 6 )
 text = "Prevent oversharing"
 icon = ExtResource( 1 )
 flat = true
@@ -771,7 +768,6 @@ margin_left = -501.0
 margin_top = 236.0
 margin_right = -325.0
 margin_bottom = 300.0
-custom_fonts/font = SubResource( 6 )
 text = "Personal Strategy"
 icon = ExtResource( 1 )
 flat = true
@@ -783,7 +779,6 @@ margin_left = -77.0
 margin_top = 236.0
 margin_right = 99.0
 margin_bottom = 300.0
-custom_fonts/font = SubResource( 6 )
 text = "Two Factor"
 icon = ExtResource( 1 )
 flat = true
