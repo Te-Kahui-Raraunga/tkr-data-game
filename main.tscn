@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://resources/Images/Graphics/IdleBtn_sml_light.png" type="Texture" id=1]
 [ext_resource path="res://resources/Background/bg_pattern.png" type="Texture" id=2]
@@ -29,6 +29,18 @@
 [ext_resource path="res://scripts/social_media_icon_select.gd" type="Script" id=27]
 [ext_resource path="res://scripts/control_4.gd" type="Script" id=28]
 [ext_resource path="res://scripts/drag_only.gd" type="Script" id=29]
+[ext_resource path="res://resources/Images/Graphics/img3.png" type="Texture" id=30]
+[ext_resource path="res://resources/Images/Graphics/img5.png" type="Texture" id=31]
+[ext_resource path="res://resources/Images/Graphics/img2.png" type="Texture" id=32]
+[ext_resource path="res://resources/Images/Graphics/img6.png" type="Texture" id=33]
+[ext_resource path="res://resources/Images/Graphics/img4.png" type="Texture" id=34]
+[ext_resource path="res://resources/Images/FB.png" type="Texture" id=35]
+[ext_resource path="res://resources/Images/TikTokLine.png" type="Texture" id=36]
+[ext_resource path="res://resources/Images/GoogleLine.png" type="Texture" id=37]
+[ext_resource path="res://resources/Images/InstagramLine.png" type="Texture" id=38]
+[ext_resource path="res://resources/Images/SnapchatLine.png" type="Texture" id=39]
+[ext_resource path="res://resources/Fonts/Oxanium/Oxanium-VariableFont_wght.ttf" type="DynamicFontData" id=40]
+[ext_resource path="res://scripts/control_6.gd" type="Script" id=41]
 
 [sub_resource type="DynamicFont" id=1]
 size = 36
@@ -50,6 +62,11 @@ font_data = ExtResource( 18 )
 size = 15
 font_data = ExtResource( 24 )
 
+[sub_resource type="DynamicFont" id=6]
+size = 15
+outline_color = Color( 0.956863, 0.933333, 0.933333, 1 )
+font_data = ExtResource( 40 )
+
 [node name="Main" type="Node2D"]
 position = Vector2( 981, 540 )
 script = ExtResource( 25 )
@@ -62,10 +79,10 @@ margin_bottom = 769.0
 color = Color( 0.0431373, 0.0431373, 0.0431373, 1 )
 
 [node name="Trans_BG" type="TextureRect" parent="."]
-margin_left = -1190.0
-margin_top = -721.0
-margin_right = 1110.0
-margin_bottom = 743.0
+margin_left = -1189.0
+margin_top = -724.0
+margin_right = 1111.0
+margin_bottom = 740.0
 texture = ExtResource( 2 )
 stretch_mode = 1
 
@@ -99,7 +116,6 @@ texture = ExtResource( 3 )
 stretch_mode = 2
 
 [node name="Control1" type="Control" parent="."]
-visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 
@@ -194,7 +210,6 @@ margin_left = -333.0
 margin_top = -76.0
 margin_right = -98.0
 margin_bottom = 62.0
-rect_scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 8 )
 script = ExtResource( 26 )
 
@@ -244,6 +259,7 @@ fit_content_height = true
 scroll_active = false
 
 [node name="Control3" type="Control" parent="."]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 152, -49 )
@@ -256,7 +272,7 @@ margin_right = -64.0
 margin_bottom = -191.0
 rect_pivot_offset = Vector2( 568, 40 )
 custom_fonts/normal_font = SubResource( 1 )
-text = "Select what you consider is Taonga from the following"
+text = "Select which social media platform you use"
 fit_content_height = true
 scroll_active = false
 
@@ -277,10 +293,10 @@ icon_align = 1
 [node name="RichTextLabel" type="RichTextLabel" parent="Control3"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -624.0
-margin_top = -201.0
-margin_right = 83.0
-margin_bottom = -153.0
+margin_left = -629.0
+margin_top = -220.0
+margin_right = 78.0
+margin_bottom = -172.0
 rect_pivot_offset = Vector2( 568, 40 )
 custom_fonts/normal_font = SubResource( 2 )
 text = "Ko te moemoea a Maui kia haere ngatahi ai ratou ko ona tuakana ki te hii ika. I te hokinga mai o ona tuakana ki tatahi, ka kii atu a Maui, “ka taea e au te haramai i to koutou na taha ki te hii ika?” "
@@ -346,10 +362,10 @@ script = ExtResource( 28 )
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Control4"]
 modulate = Color( 1, 1, 1, 0.764706 )
-margin_left = -416.0
-margin_top = -335.0
-margin_right = 445.0
-margin_bottom = -279.0
+margin_left = -421.0
+margin_top = -356.0
+margin_right = 440.0
+margin_bottom = -300.0
 rect_pivot_offset = Vector2( 568, 40 )
 custom_fonts/normal_font = SubResource( 1 )
 text = "Drag and drop the toanga to each platform you use"
@@ -375,8 +391,10 @@ margin_top = 279.0
 margin_right = -464.0
 margin_bottom = 335.0
 rect_pivot_offset = Vector2( 312, 42 )
+mouse_default_cursor_shape = 13
 texture = ExtResource( 14 )
 expand = true
+stretch_mode = 6
 script = ExtResource( 29 )
 
 [node name="TextureRect2" type="TextureRect" parent="Control4"]
@@ -385,7 +403,8 @@ margin_top = 279.0
 margin_right = -312.0
 margin_bottom = 335.0
 rect_pivot_offset = Vector2( 312, 42 )
-texture = ExtResource( 14 )
+mouse_default_cursor_shape = 13
+texture = ExtResource( 32 )
 expand = true
 script = ExtResource( 29 )
 
@@ -395,7 +414,8 @@ margin_top = 279.0
 margin_right = 160.0
 margin_bottom = 335.0
 rect_pivot_offset = Vector2( 312, 42 )
-texture = ExtResource( 14 )
+mouse_default_cursor_shape = 13
+texture = ExtResource( 30 )
 expand = true
 script = ExtResource( 29 )
 
@@ -405,7 +425,8 @@ margin_top = 279.0
 margin_right = 320.0
 margin_bottom = 335.0
 rect_pivot_offset = Vector2( 312, 42 )
-texture = ExtResource( 14 )
+mouse_default_cursor_shape = 13
+texture = ExtResource( 34 )
 expand = true
 script = ExtResource( 29 )
 
@@ -415,7 +436,8 @@ margin_top = 279.0
 margin_right = -8.0
 margin_bottom = 335.0
 rect_pivot_offset = Vector2( 312, 42 )
-texture = ExtResource( 14 )
+mouse_default_cursor_shape = 13
+texture = ExtResource( 31 )
 expand = true
 script = ExtResource( 29 )
 
@@ -425,7 +447,8 @@ margin_top = 279.0
 margin_right = -160.0
 margin_bottom = 335.0
 rect_pivot_offset = Vector2( 312, 42 )
-texture = ExtResource( 14 )
+mouse_default_cursor_shape = 13
+texture = ExtResource( 33 )
 expand = true
 script = ExtResource( 29 )
 
@@ -447,10 +470,10 @@ custom_constants/separation = 6
 alignment = 1
 
 [node name="ToangaHbox2" type="HBoxContainer" parent="Control4"]
-margin_left = -485.0
-margin_top = -292.0
-margin_right = 515.0
-margin_bottom = -164.0
+margin_left = -501.0
+margin_top = -316.0
+margin_right = 499.0
+margin_bottom = -212.0
 custom_constants/separation = 6
 alignment = 1
 
@@ -524,7 +547,7 @@ margin_top = 239.0
 margin_right = -48.0
 margin_bottom = 263.0
 rect_pivot_offset = Vector2( 72, 16 )
-text = "Tiktok"
+text = "Snapchat"
 
 [node name="ibtn" type="Button" parent="Control5"]
 margin_left = -232.0
@@ -532,7 +555,7 @@ margin_top = 239.0
 margin_right = -155.0
 margin_bottom = 263.0
 rect_pivot_offset = Vector2( 72, 16 )
-text = "Snapchat"
+text = "Instagram"
 
 [node name="tbtn" type="Button" parent="Control5"]
 margin_left = -344.0
@@ -540,9 +563,9 @@ margin_top = 239.0
 margin_right = -260.0
 margin_bottom = 263.0
 rect_pivot_offset = Vector2( 72, 16 )
-text = "Instagram"
+text = "TikTok"
 
-[node name="TextureRect" type="TextureRect" parent="Control5"]
+[node name="WorldMap" type="TextureRect" parent="Control5"]
 margin_left = -568.0
 margin_top = -217.0
 margin_right = 464.0
@@ -571,11 +594,52 @@ text = "Ko te moemoea a Maui kia haere ngatahi ai ratou ko ona tuakana ki te hii
 fit_content_height = true
 scroll_active = false
 
+[node name="GLine" type="TextureRect" parent="Control5"]
+margin_left = -557.0
+margin_top = -220.0
+margin_right = 459.0
+margin_bottom = 188.0
+texture = ExtResource( 37 )
+expand = true
+
+[node name="FLine" type="TextureRect" parent="Control5"]
+margin_left = -557.0
+margin_top = -220.0
+margin_right = 459.0
+margin_bottom = 188.0
+texture = ExtResource( 35 )
+expand = true
+
+[node name="ILine" type="TextureRect" parent="Control5"]
+margin_left = -557.0
+margin_top = -220.0
+margin_right = 459.0
+margin_bottom = 188.0
+texture = ExtResource( 38 )
+expand = true
+
+[node name="SLine" type="TextureRect" parent="Control5"]
+margin_left = -557.0
+margin_top = -220.0
+margin_right = 459.0
+margin_bottom = 188.0
+texture = ExtResource( 39 )
+expand = true
+
+[node name="TLine" type="TextureRect" parent="Control5"]
+margin_left = -557.0
+margin_top = -220.0
+margin_right = 459.0
+margin_bottom = 188.0
+texture = ExtResource( 36 )
+expand = true
+
 [node name="Control6" type="Control" parent="."]
 visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 152, -49 )
+script = ExtResource( 41 )
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Control6"]
 modulate = Color( 1, 1, 1, 0.764706 )
@@ -588,19 +652,6 @@ custom_fonts/normal_font = SubResource( 1 )
 text = "Resources to protect your data"
 fit_content_height = true
 scroll_active = false
-
-[node name="Continue1" type="Button" parent="Control6"]
-margin_left = 360.0
-margin_top = 271.0
-margin_right = 562.0
-margin_bottom = 338.0
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Continue"
-icon = ExtResource( 1 )
-flat = true
-icon_align = 1
 
 [node name="TextureRect" type="TextureRect" parent="Control6"]
 margin_left = -496.0
@@ -665,10 +716,10 @@ valign = 1
 autowrap = true
 
 [node name="TextureRect3" type="TextureRect" parent="Control6"]
-margin_left = 344.0
-margin_top = -169.0
-margin_right = 488.0
-margin_bottom = 15.0
+margin_left = 331.0
+margin_top = -164.0
+margin_right = 475.0
+margin_bottom = 20.0
 rect_pivot_offset = Vector2( 312, 42 )
 texture = ExtResource( 5 )
 expand = true
@@ -703,6 +754,42 @@ icon = ExtResource( 21 )
 flat = true
 expand_icon = true
 
+[node name="PreventOversharing" type="Button" parent="Control6"]
+margin_left = 315.0
+margin_top = 236.0
+margin_right = 491.0
+margin_bottom = 300.0
+custom_fonts/font = SubResource( 6 )
+text = "Prevent oversharing"
+icon = ExtResource( 1 )
+flat = true
+icon_align = 1
+expand_icon = true
+
+[node name="PersonalStrategy" type="Button" parent="Control6"]
+margin_left = -501.0
+margin_top = 236.0
+margin_right = -325.0
+margin_bottom = 300.0
+custom_fonts/font = SubResource( 6 )
+text = "Personal Strategy"
+icon = ExtResource( 1 )
+flat = true
+icon_align = 1
+expand_icon = true
+
+[node name="Twofactor" type="Button" parent="Control6"]
+margin_left = -77.0
+margin_top = 236.0
+margin_right = 99.0
+margin_bottom = 300.0
+custom_fonts/font = SubResource( 6 )
+text = "Two Factor"
+icon = ExtResource( 1 )
+flat = true
+icon_align = 1
+expand_icon = true
+
 [connection signal="pressed" from="Control1/Continue1" to="." method="_on_Continue1_pressed"]
 [connection signal="pressed" from="Control2/Continue2" to="." method="_on_Continue2_pressed"]
 [connection signal="pressed" from="Control2/Back2" to="." method="_on_Back2_pressed"]
@@ -718,3 +805,6 @@ expand_icon = true
 [connection signal="pressed" from="Control5/ibtn" to="." method="_on_ibtn_pressed"]
 [connection signal="pressed" from="Control5/tbtn" to="." method="_on_tbtn_pressed"]
 [connection signal="pressed" from="Control6/Back6" to="." method="_on_Back6_pressed"]
+[connection signal="pressed" from="Control6/PreventOversharing" to="Control6" method="_on_PreventOversharing_pressed"]
+[connection signal="pressed" from="Control6/PersonalStrategy" to="Control6" method="_on_PersonalStrategy_pressed"]
+[connection signal="pressed" from="Control6/Twofactor" to="Control6" method="_on_Twofactor_pressed"]

@@ -1,13 +1,20 @@
-extends TextureRect
+extends TextureRect 
 
-func _get_drag_data(at_position):
-	
-	var preview_texture = TextureRect.new()
-	#preview of the icon when holding the icon
-	preview_texture.texture = texture
-	preview_texture.expand_mode = 1
-	preview_texture.size = Vector2(100,50)
+  
+func get_drag_data(at_position): 
+	var textureRect = TextureRect.new() 
+	textureRect.texture = texture 
+	textureRect.expand = true 
+	textureRect.rect_size = Vector2(140,40) 
+	set_drag_preview(textureRect) 
 
-	set_drag_preview(preview_texture)
-	
-	return texture
+	return texture 
+  
+#The dropping functionality which is mostly built-in code 
+func can_drop_data(at_position, data): 
+	return data 
+
+  
+func drop_data(at_position, data): 
+	self.texture = data 
+ 

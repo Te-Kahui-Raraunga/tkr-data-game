@@ -21,7 +21,6 @@ func toggle_selected():
 		#continue button is enabled only when a taonga is selected
 		$"../Continue2".disabled = false
 	else:
-		var index = SocialMediaVars.taonga_array.find(self)
-		SocialMediaVars.taonga_array.erase(index)
+		SocialMediaVars.taonga_array.erase(self)
 		print("Taonga removed")
 		self.rect_scale = Vector2(1, 1) # Reset to normal size when unselected

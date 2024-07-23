@@ -20,7 +20,6 @@ func toggle_selected():
 		#continue button is enabled only when a social media is selected
 		$"../Continue3".disabled = false
 	else:
-		var index = SocialMediaVars.social_array.find(self)
-		SocialMediaVars.social_array.erase(index)
+		SocialMediaVars.social_array.erase(self)
 		print("Logo removed")
 		self.rect_scale = Vector2(1, 1) # Reset to normal size when unselected

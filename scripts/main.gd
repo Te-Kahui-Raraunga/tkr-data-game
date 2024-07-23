@@ -39,19 +39,19 @@ func _ready():
 	texture_tline = $Control5/TLine
 
 func _on_gbtn_pressed():
-	texture_gline.visible = not texture_gline.visible
+	$Control5/GLine.visible = not $Control5/GLine.visible
 	
 func _on_fbtn_pressed():
-	texture_fline.visible = not texture_fline.visible
+	$Control5/FLine.visible = not $Control5/FLine.visible
 	
 func _on_sbtn_pressed():
-	texture_sline.visible = not texture_sline.visible
+	$Control5/SLine.visible = not $Control5/SLine.visible
 
 func _on_ibtn_pressed():
-	texture_iline.visible = not texture_iline.visible
+	$Control5/ILine.visible = not $Control5/ILine.visible
 
 func _on_tbtn_pressed():
-	texture_tline.visible = not texture_tline.visible
+	$Control5/TLine.visible = not $Control5/TLine.visible
 
 
 func _on_Back2_pressed():
