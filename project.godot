@@ -12,7 +12,7 @@ config_version=4
 
 config/name="TKR Data Game 3.5"
 run/main_scene="res://main.tscn"
-config/icon="res://icon.png"
+config/icon="res://resources/Background/bg_trans.png"
 
 [autoload]
 
@@ -20,9 +20,9 @@ SocialMediaVars="*res://global/social_media_vars.gd"
 
 [display]
 
-window/size/width=1460
-window/size/height=1000
-window/size/fullscreen=true
+window/size/width=1920
+window/size/height=1080
+window/stretch/mode="viewport"
 
 [gui]
 
