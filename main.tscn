@@ -44,6 +44,7 @@ size = 45
 font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=9]
+size = 20
 font_data = ExtResource( 16 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -67,7 +68,8 @@ size = 17
 font_data = ExtResource( 16 )
 
 [node name="Main" type="Node2D"]
-position = Vector2( 981, 540 )
+position = Vector2( 950, 633 )
+scale = Vector2( 1.32618, 1.29541 )
 script = ExtResource( 25 )
 
 [node name="Color_BG" type="ColorRect" parent="."]
@@ -148,10 +150,10 @@ icon_align = 1
 [node name="RichTextLabel" type="RichTextLabel" parent="Control1"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -385.0
-margin_top = -73.0
-margin_right = 322.0
-margin_bottom = -25.0
+margin_left = -489.955
+margin_top = -112.697
+margin_right = 422.045
+margin_bottom = -2.69724
 rect_pivot_offset = Vector2( 568, 40 )
 custom_fonts/normal_font = SubResource( 9 )
 text = "Ko te moemoea a Maui kia haere ngatahi ai ratou ko ona tuakana ki te hii ika. I te hokinga mai o ona tuakana ki tatahi, ka kii atu a Maui, “ka taea e au te haramai i to koutou na taha ki te hii ika?” "
