@@ -68,7 +68,7 @@ size = 17
 font_data = ExtResource( 16 )
 
 [node name="Main" type="Node2D"]
-position = Vector2( 950, 633 )
+position = Vector2( 954, 611 )
 scale = Vector2( 1.40251, 1.40283 )
 script = ExtResource( 25 )
 
