@@ -68,8 +68,8 @@ size = 17
 font_data = ExtResource( 16 )
 
 [node name="Main" type="Node2D"]
-position = Vector2( 954, 548 )
-scale = Vector2( 1.40251, 1.40283 )
+position = Vector2( 963, 606 )
+scale = Vector2( 1.43547, 1.19059 )
 script = ExtResource( 25 )
 
 [node name="Color_BG" type="ColorRect" parent="."]
